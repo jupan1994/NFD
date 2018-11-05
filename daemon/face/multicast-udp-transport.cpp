@@ -160,8 +160,8 @@ MulticastUdpTransport::openRxSocket(protocol::socket& sock,
     sock.set_option(boost::asio::ip::multicast::join_group(multicastGroup.address().to_v6()));
   }
 
-  if (netif)
-    bindToDevice(sock.native_handle(), netif->getName());
+  // if (netif)
+  //   bindToDevice(sock.native_handle(), netif->getName());
 }
 
 void
